@@ -1,21 +1,21 @@
-# JOE syntax highlight file for Python, a copy of the Pycharm-Color-Scheme
+# JOE syntax highlight file for Python
 
 =Idle		bold white
 =Comment 	white
-=String		green
+=String		bold green # selbst angelegt, war vorher auch eine Constant
 =Docstring	green
 =DocstringLabel	bold green
 =DocEscape	bold green
 =Constant 	cyan
 =Escape 	bold yellow
 =Keyword 	yellow
-=Builtin	cyan
+=Builtin	bold magenta
 =Bad		bold red
 =Brace		magenta
 
 =PrivateMember	yellow #fg_310 # brown
-=Decorator	red
-=Declaration	bold blue
+=Decorator	bold yellow
+=Declaration	bold yellow #bold blue
 
 :idle Idle
 	*		idle
@@ -25,6 +25,7 @@
 	"a-zA-Z_"	ident		noeat
 	"{}"		brace		recolor=-1
 	"@"		decorator	recolor=-1
+	","		kw		recolor=-1
 
 :brace Brace
 	*		idle		noeat
@@ -111,17 +112,18 @@
 	"while"		kw
 	"with"		kw
 	"yield"		kw
-	
+	","		kw	
+
 	# quasi-keywords
 	"False"		lit
 	"None"		lit
 	"True"		lit
-	# builtin-funktions
+	# builtin-funktionen
 
 	"abs"			bi
 	"delattr"		bi
 	"hash"			bi
-	"memoryview"	bi
+	"memoryview"		bi
 	"set"			bi
 	"all"			bi
 	"dict"			bi
@@ -142,20 +144,20 @@
 	"enumerate"		bi
 	"input"			bi
 	"oct"			bi
-	"staticmethod"	bi
+	"staticmethod"		bi
 	"bool"			bi
 	"eval"			bi
 	"int"			bi
 	"open"			bi
 	"str"			bi
-	"breakpoint"	bi
+	"breakpoint"		bi
 	"exec"			bi
-	"isinstance"	bi
+	"isinstance"		bi
 	"ord"			bi
 	"sum"			bi
 	"bytearray"		bi
 	"filter"		bi
-	"issubclass"	bi
+	"issubclass"		bi
 	"pow"			bi
 	"super"			bi
 	"bytes"			bi
@@ -173,7 +175,7 @@
 	"list"			bi
 	"range"			bi
 	"vars"			bi
-	"classmethod"	bi
+	"classmethod"		bi
 	"getattr"		bi
 	"locals"		bi
 	"repr"			bi
@@ -182,7 +184,7 @@
 	"globals"		bi
 	"map"			bi
 	"reversed"		bi
-	"__import__"	bi
+	"__import__"		bi
 	"complex"		bi
 	"hasattr"		bi
 	"max"			bi
